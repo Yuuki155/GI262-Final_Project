@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI.Table;
 
 namespace Solution
 {
@@ -17,6 +18,12 @@ namespace Solution
         [Header("Set NPC")]
         public NPC Npc;
         public NPCSkill NpcSkill;
+        public int NpcCount;
+        public float spawnDelay = 2.0f;
+        private List<NPC> allNpcs = new List<NPC>();
+        [Header("Set Wave")]
+        public int currentWave = 1;
+        public float nextWaveDelay = 3.0f;
         [Header("Set Exit")]
         public OOPExit Exit;
         [Header("Set Wall")]
@@ -80,7 +87,7 @@ namespace Solution
         IEnumerator SetUPMap() {
             SetUpPlayer();
             SetUpExit();
-            SetUpNpc();
+            StartCoroutine(SetUpNpc());
             PlaceItemsOnMap(obsatcleCount, demonWallsPrefab, wallParent, demonWall);
             //PlaceItemsOnMap(itemPotionCount, itemsPrefab, itemParent, potion);
             PlaceItemsOnMap(colloctItemCount, collectItemsPrefab, itemParent, collectItem);
@@ -114,14 +121,70 @@ namespace Solution
             }
             onComplete?.Invoke();
         }
-        private void SetUpNpc()
+        private IEnumerator SetUpNpc()
         {
-            mapdata[Npc.positionX, Npc.positionY] = Npc;
-            mapdata[NpcSkill.positionX, NpcSkill.positionY] = NpcSkill;
-            Npc.transform.position = new Vector3(Npc.positionX, Npc.positionY, 0);
-            NpcSkill.transform.position = new Vector3(NpcSkill.positionX, NpcSkill.positionY, 0);
-            Npc.mapGenerator = this;
-            NpcSkill.mapGenerator = this;
+            if (currentWave == 1)
+            {
+                // --- WAVE 1: สร้าง NPC ขึ้นมาใหม่ครั้งแรกพร้อมดีเลย์ ---
+                int columns = 3;
+                int spacingX = 2;
+                int spacingY = 2;
+
+                Npc.gameObject.SetActive(true);
+                Npc.ResetCustomer(); // รีเซ็ตออเดอร์
+                mapdata[Npc.positionX, Npc.positionY] = Npc;
+                Npc.transform.position = new Vector3(Npc.positionX, Npc.positionY, 0);
+                Npc.mapGenerator = this;
+                allNpcs.Add(Npc);
+
+                for (int i = 1; i != NpcCount; i++)
+                {
+                    yield return new WaitForSeconds(spawnDelay);
+
+                    int col = i % columns;
+                    int row = i / columns;
+                    int spawnX = Npc.positionX + (col * spacingX);
+                    int spawnY = Npc.positionY - (row * spacingY);
+
+                    NPC newNpc = Instantiate(Npc, new Vector3(spawnX, spawnY, 0), Quaternion.identity);
+                    newNpc.positionX = spawnX;
+                    newNpc.positionY = spawnY;
+                    newNpc.mapGenerator = this;
+                    newNpc.ResetCustomer(); //
+
+                    mapdata[spawnX, spawnY] = newNpc;
+                    allNpcs.Add(newNpc);
+                }
+            }
+            else
+            {
+                for (int i = 0; i != allNpcs.Count; i++)
+                {
+                    yield return new WaitForSeconds(spawnDelay);
+
+                    NPC existingNpc = allNpcs[i];
+                    existingNpc.ResetCustomer(); //
+
+                    mapdata[existingNpc.positionX, existingNpc.positionY] = existingNpc;
+                    existingNpc.gameObject.SetActive(true);
+                }
+            }
+        }
+        public void CheckWaveComplete()
+        {
+            foreach (NPC npc in allNpcs)
+            {
+                if (npc.gameObject.activeSelf)
+                {
+                    return;
+                }
+            }
+            currentWave++;
+            Invoke("StartNextWave", nextWaveDelay);
+        }
+        private void StartNextWave()
+        {
+            StartCoroutine(SetUpNpc());
         }
         private void SetUpExit()
         {

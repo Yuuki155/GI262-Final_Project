@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SurfAndTurf
   m_EditorClassIdentifier: Assembly-CSharp::FoodSo
   ItemName: Surf & Turf
-  ItemSprite: {fileID: 0}
+  ItemSprite: {fileID: 21300000, guid: 810859102690d7c4181e0c5925a8b24a, type: 3}

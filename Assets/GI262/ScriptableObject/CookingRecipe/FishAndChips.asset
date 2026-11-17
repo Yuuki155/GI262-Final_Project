@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: FishAndChips
   m_EditorClassIdentifier: Assembly-CSharp::CookingRecipeSo
   Ingredient:
-  - {fileID: 11400000, guid: dccab538a5bf3584eb73a2813972fd56, type: 2}
-  - {fileID: 11400000, guid: 3175925d7c86a944da1431ee2ec6890a, type: 2}
+    _serializedList:
+    - Key: {fileID: 11400000, guid: dccab538a5bf3584eb73a2813972fd56, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 3175925d7c86a944da1431ee2ec6890a, type: 2}
+      Value: 1
   Product: {fileID: 11400000, guid: 9058e465395a52c4ab2adedc5df1ce38, type: 2}

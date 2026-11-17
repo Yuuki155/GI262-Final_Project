@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: SurfAndTurf
   m_EditorClassIdentifier: Assembly-CSharp::CookingRecipeSo
   Ingredient:
-  - {fileID: 11400000, guid: dccab538a5bf3584eb73a2813972fd56, type: 2}
-  - {fileID: 11400000, guid: b5fb598c3ecd87644a202d64f0f7ab1e, type: 2}
+    _serializedList:
+    - Key: {fileID: 11400000, guid: b5fb598c3ecd87644a202d64f0f7ab1e, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: dccab538a5bf3584eb73a2813972fd56, type: 2}
+      Value: 1
   Product: {fileID: 11400000, guid: e616f96e109a4824eac17ed055eb183d, type: 2}

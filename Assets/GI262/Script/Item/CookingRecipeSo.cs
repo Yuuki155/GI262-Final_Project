@@ -1,9 +1,9 @@
-using System.Collections.Generic;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CookingRecipeSo", menuName = "Scriptable Objects/Cooking Recipe")]
 public class CookingRecipeSo : ScriptableObject
 {
-    [SerializeField] List<IngredientSo> Ingredient;
+    [SerializeField] SerializedDictionary<IngredientSo, int> Ingredient;
     [SerializeField] ItemSo Product;
 }

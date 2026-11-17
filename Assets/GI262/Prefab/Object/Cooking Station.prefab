@@ -123,8 +123,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CookingStation
   CookingRecipe:
+  - {fileID: 11400000, guid: 2c24405f6c47e494e94828f49069f8b7, type: 2}
+  - {fileID: 11400000, guid: 85db61ed0fdc5614a95ad38b51d27ce4, type: 2}
+  - {fileID: 11400000, guid: e940b682cf8b13a42acf90f3920cf622, type: 2}
+  - {fileID: 11400000, guid: 26f7452d7ae96ce4786866bd3ca94960, type: 2}
   - {fileID: 11400000, guid: e5a46a8823122c841aa6fc37861d7c98, type: 2}
+  - {fileID: 11400000, guid: 77f0cb3cf5533f74b8e3d11b6756e4a3, type: 2}
+  - {fileID: 11400000, guid: 287631127e2629a4ea56849666803628, type: 2}
+  - {fileID: 11400000, guid: 84c4c022497ef8443aa66ae9a83f0c9e, type: 2}
   - {fileID: 11400000, guid: 7a677da85fcb6ca4d9c6f2e1bfa5f58f, type: 2}
+  - {fileID: 11400000, guid: 300427fb472cf2e46b1273cd34b30300, type: 2}
   ItemImage:
   - {fileID: 3309816193031602457}
   - {fileID: 7244345374749676774}
@@ -440,7 +448,7 @@ RectTransform:
   m_GameObject: {fileID: 4915646753265774417}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1402208141795694364}
@@ -448,7 +456,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 32, y: 32}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9101667704068286962
 CanvasRenderer:
@@ -478,7 +486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9bd7cf3b5a1ae5546a006467d6c53908, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c73215e24e191794a8f81255a826a049, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

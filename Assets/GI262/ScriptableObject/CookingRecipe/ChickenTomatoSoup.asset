@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b80f631e13a8d438e89f468accbbe2, type: 3}
+  m_Name: ChickenTomatoSoup
+  m_EditorClassIdentifier: Assembly-CSharp::CookingRecipeSo
+  Ingredient:
+    _serializedList:
+    - Key: {fileID: 11400000, guid: 57e23294189db8247b6511b2ad7fd4f5, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: e920c82ded8cf1e439da840d6306f6c3, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: abe931b70d723fd40a2dbc6206906779, type: 2}
+      Value: 1
+  Product: {fileID: 11400000, guid: 3dc69c3273b22c64d899fe03815a5941, type: 2}

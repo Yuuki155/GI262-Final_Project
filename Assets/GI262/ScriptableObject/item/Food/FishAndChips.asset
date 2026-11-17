@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FishAndChips
   m_EditorClassIdentifier: Assembly-CSharp::FoodSo
   ItemName: Fish & Chips
-  ItemSprite: {fileID: 0}
+  ItemSprite: {fileID: 21300000, guid: d026a626bbebeea4f89e8357f12e67c4, type: 3}

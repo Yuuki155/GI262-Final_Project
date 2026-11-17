@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Beef
   m_EditorClassIdentifier: Assembly-CSharp::IngredientSo
   ItemName: Beef
-  ItemSprite: {fileID: 0}
+  ItemSprite: {fileID: 21300000, guid: 9bd7cf3b5a1ae5546a006467d6c53908, type: 3}

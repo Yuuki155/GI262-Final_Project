@@ -7,7 +7,7 @@ public class NPC : Identity
     public DialogueUI dialogueUI;
     public DialogueSequen dialogueSeauen;
     public bool canTalk = true;
-    public PatienceBarUI patienceBarUI;
+    public PatienceBar patienceBarUI;
 
     private void Update()
     {

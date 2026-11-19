@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PatienceBarUI : MonoBehaviour
+public class PatienceBar : MonoBehaviour
 {
     public Slider patienceSlider;
     public float maxPatience = 100f;
@@ -34,7 +34,7 @@ public class PatienceBarUI : MonoBehaviour
             currPatience = 0;
             isTimeUp = true;
         }
-            
+
 
         patienceSlider.value = currPatience;
         patienceSlider.maxValue = maxPatience;
@@ -43,7 +43,7 @@ public class PatienceBarUI : MonoBehaviour
     {
         if (currPatience > 70)
             fillImage.color = normalColor;
-        else if (currPatience > 50) 
+        else if (currPatience > 50)
             fillImage.color = midColor;
         else
             fillImage.color = lowColor;

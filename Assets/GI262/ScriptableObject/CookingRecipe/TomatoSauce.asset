@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CookingRecipeSo
   Ingredient:
     _serializedList:
-    - Key: {fileID: 11400000, guid: 57e23294189db8247b6511b2ad7fd4f5, type: 2}
+    - Key: {fileID: 11400000, guid: a3f1463ed4576774ebba880ce640872e, type: 2}
       Value: 3
   Product: {fileID: 11400000, guid: 57e23294189db8247b6511b2ad7fd4f5, type: 2}

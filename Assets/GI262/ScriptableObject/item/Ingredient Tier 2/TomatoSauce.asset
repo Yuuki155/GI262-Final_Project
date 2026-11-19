@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TomatoSauce
   m_EditorClassIdentifier: Assembly-CSharp::IngredientSo
   ItemName: Tomato Sauce
-  ItemSprite: {fileID: 0}
+  ItemSprite: {fileID: 21300000, guid: f9052158b44575247a58bd033a1afef4, type: 3}

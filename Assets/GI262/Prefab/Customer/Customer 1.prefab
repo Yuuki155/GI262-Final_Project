@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Customer
   isTalk: 0
-  spawnItem: 0
   patienceBarUI: {fileID: 6949879474847290310}
 --- !u!1 &2695980576408270375
 GameObject:
@@ -551,7 +550,7 @@ MonoBehaviour:
   patienceSlider: {fileID: 5800853910894921317}
   maxPatience: 100
   currPatience: 0
-  decreaseRate: 10
+  decreaseRate: 5
   isTimeUp: 0
   fillImage: {fileID: 2448262576433180516}
   normalColor: {r: 0, g: 1, b: 0, a: 1}
